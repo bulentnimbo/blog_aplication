@@ -4,27 +4,27 @@ class CommentsController < ApplicationController
 
     def create
         @comment = @post.comments.create(comment_params)
-        @comments.user = current_user
+        @comment.user = current_user
 
        if @comment.save
         flash[:notice] = "Comment was successfully created."
-           redirect_to @post_path(@post)
+           redirect_to post_path(@post)
        else
          flash[:error] = "Comment has not been created."
-         redirect_to @post_path(@post)
+         redirect_to post_path(@post)
        end
     end
 
     def destroy
         @comment = @post.comments.find(params[:id])
         @comment.destroy
-        redirect_to @post_path(@post)
+        redirect_to post_path(@post)
     end
 
     private
 
     def set_post
-        @post = Post.find(params[:id])
+        @post = Post.find(params[:post_id])
     end
 
     def comment_params
