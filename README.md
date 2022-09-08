@@ -24,3 +24,4 @@ Things you may want to cover:
 * ...
 # blog_demo
 # blog_aplication
+# blog_demo
