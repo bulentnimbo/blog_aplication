@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     end
 
     def update
-        # @comment = @post.comments.find(params[:id])
+        @comment = @post.comments.find(params[:id])
         # @comment.update(comment_params)
         # redirect_to post_path(@post)
 
@@ -30,7 +30,7 @@ class CommentsController < ApplicationController
             if @comment.update(comment_params)
                 format.html { redirect_to post_url(@post), notice: 'Comment was successfully updated.' }
             else
-                format.html { redirect_to post_url(@post), alert: 'Comment was not updated.' }
+                format.html { redirect_to post_url(@post), alert: 'Comment was not updated!' }
             end
         end
        

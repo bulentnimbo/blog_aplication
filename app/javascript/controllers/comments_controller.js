@@ -9,13 +9,10 @@ export default class extends Controller {
     console.log("I clicked the edit button");
     event.preventDefault();
     event.stopPropagation();
-
     const formID = event.params["form"];
-
     console.log("I formID the edit  " + formID);
     const commentBodyID = event.params["body"];
     const form = document.getElementById(formID);
-
     form.classList.toggle("d-none");
     form.classList.toggle("mt-5");
     const commentBody = document.getElementById(commentBodyID);
