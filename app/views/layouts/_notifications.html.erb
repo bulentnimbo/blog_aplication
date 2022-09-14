@@ -5,7 +5,7 @@
                 <%= @unread.count >= 9 ? "9+" : @unread.count %> <i class="bi bi-suit-heart-fill"></i>
             </span>
         </a>
-        <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown">
+    <ul class="dropdown-menu dropdown-menu-right dropdown-menu-lg" aria-labelledby="navbarDropdown">
             <% @unread.each do |notification| %>
                 <%= render "layouts/notification", notification: notification%>
             <% end %>
