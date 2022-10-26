@@ -78,3 +78,5 @@ end
 gem "noticed", "~> 1.5"
 
 gem "friendly_id", "~> 5.4"
+
+gem "bullet", "~> 7.0"
